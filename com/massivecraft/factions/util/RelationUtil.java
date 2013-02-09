@@ -25,7 +25,7 @@ public class RelationUtil
 		{
 			if (me instanceof FPlayer && myFaction == thatFaction)
 			{
-				ret = "your faction";
+				ret = "Twoje miasto";
 			}
 			else
 			{
@@ -37,7 +37,7 @@ public class RelationUtil
 			FPlayer fplayerthat = (FPlayer) that;
 			if (that == me)
 			{
-				ret = "you";
+				ret = "Ty";
 			}
 			else if (thatFaction == myFaction)
 			{
