@@ -139,7 +139,7 @@ public class Factions extends EntityCollection<Faction>
 		
 		if(str.length() > Conf.factionTagLengthMax)
 		{
-			errors.add(P.p.txt.parse("<i>Tag miasta nie moze byc dluzszy nic<h>%s<i>.", Conf.factionTagLengthMax));
+			errors.add(P.p.txt.parse("<i>Tag miasta nie moze byc dluzszy niz <h>%s<i>.", Conf.factionTagLengthMax));
 		}
 		
 		for (char c : str.toCharArray())
