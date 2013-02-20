@@ -84,7 +84,7 @@ public class Econ
 			P.p.log(Level.WARNING, "Vault does not appear to be hooked into an economy plugin.");
 			return;
 		}
-		to.msg("<a>%s's<i> balance is <h>%s<i>.", about.describeTo(to, true), Econ.moneyString(econ.getBalance(about.getAccountId())));
+		to.msg("<a>%s's<i> ma <h>%s<i> denarow.", about.describeTo(to, true), Econ.moneyString(econ.getBalance(about.getAccountId())));
 	}
 	
 	public static boolean canIControllYou(EconomyParticipator i, EconomyParticipator you)
@@ -143,7 +143,7 @@ public class Econ
 		{
 			// There was not enough money to pay
 			if (invoker != null && notify)
-				invoker.msg("<h>%s<b> can't afford to transfer <h>%s<b> to %s<b>.", from.describeTo(invoker, true), moneyString(amount), to.describeTo(invoker));
+				invoker.msg("<h>%s<b> nie moze dac <h>%s<b> denarow dla %s<b>.", from.describeTo(invoker, true), moneyString(amount), to.describeTo(invoker));
 
 			return false;
 		}
@@ -164,7 +164,7 @@ public class Econ
 
 		// if we get here something with the transaction failed
 		if (notify)
-			invoker.msg("Unable to transfer %s<b> to <h>%s<b> from <h>%s<b>.", moneyString(amount), to.describeTo(invoker), from.describeTo(invoker, true));
+			invoker.msg("Nie mozna przelac %s<b> do <h>%s<b> od <h>%s<b>.", moneyString(amount), to.describeTo(invoker), from.describeTo(invoker, true));
 
 		return false;
 	}
@@ -200,28 +200,28 @@ public class Econ
 		{
 			for (FPlayer recipient : recipients)
 			{
-				recipient.msg("<h>%s<i> was transfered from <h>%s<i> to <h>%s<i>.", moneyString(amount), from.describeTo(recipient), to.describeTo(recipient));
+				recipient.msg("<h>%s<i> zostalo przelanych z <h>%s<i> do <h>%s<i>.", moneyString(amount), from.describeTo(recipient), to.describeTo(recipient));
 			}
 		}
 		else if (invoker == from)
 		{
 			for (FPlayer recipient : recipients)
 			{
-				recipient.msg("<h>%s<i> <h>gave %s<i> to <h>%s<i>.", from.describeTo(recipient, true), moneyString(amount), to.describeTo(recipient));
+				recipient.msg("<h>%s<i> <h>dal %s<i> dla <h>%s<i>.", from.describeTo(recipient, true), moneyString(amount), to.describeTo(recipient));
 			}
 		}
 		else if (invoker == to)
 		{
 			for (FPlayer recipient : recipients)
 			{
-				recipient.msg("<h>%s<i> <h>took %s<i> from <h>%s<i>.", to.describeTo(recipient, true), moneyString(amount), from.describeTo(recipient));
+				recipient.msg("<h>%s<i> <h>zabral %s<i> z <h>%s<i>.", to.describeTo(recipient, true), moneyString(amount), from.describeTo(recipient));
 			}
 		}
 		else
 		{
 			for (FPlayer recipient : recipients)
 			{
-				recipient.msg("<h>%s<i> transfered <h>%s<i> from <h>%s<i> to <h>%s<i>.", invoker.describeTo(recipient, true), moneyString(amount), from.describeTo(recipient), to.describeTo(recipient));
+				recipient.msg("<h>%s<i> przelal <h>%s<i> z <h>%s<i> do <h>%s<i>.", invoker.describeTo(recipient, true), moneyString(amount), from.describeTo(recipient), to.describeTo(recipient));
 			}
 		}
 	}
@@ -233,7 +233,7 @@ public class Econ
 		if ( ! econ.has(ep.getAccountId(), delta))
 		{
 			if (toDoThis != null && !toDoThis.isEmpty())
-				ep.msg("<h>%s<i> can't afford <h>%s<i> %s.", ep.describeTo(ep, true), moneyString(delta), toDoThis);
+				ep.msg("<h>%s<i> nie mozna dac <h>%s<i> %s.", ep.describeTo(ep, true), moneyString(delta), toDoThis);
 			return false;
 		}
 		return true;
@@ -261,12 +261,12 @@ public class Econ
 			if (er.transactionSuccess()) {
 				modifyUniverseMoney(-delta);
 				if (forDoingThis != null && !forDoingThis.isEmpty())
-					ep.msg("<h>%s<i> gained <h>%s<i> %s.", You, moneyString(delta), forDoingThis);
+					ep.msg("<h>%s<i> pozyskal <h>%s<i> %s.", You, moneyString(delta), forDoingThis);
 				return true;
 			} else {
 				// transfer to account failed
 				if (forDoingThis != null && !forDoingThis.isEmpty())
-					ep.msg("<h>%s<i> would have gained <h>%s<i> %s, but the deposit failed.", You, moneyString(delta), forDoingThis);
+					ep.msg("<h>%s<i> mogl pozyskac <h>%s<i> %s, lecz zdeponowanie sie nie powiodlo.", You, moneyString(delta), forDoingThis);
 				return false;
 			}
 		}
@@ -280,14 +280,14 @@ public class Econ
 				// There is enough money to pay
 				modifyUniverseMoney(-delta);
 				if (forDoingThis != null && !forDoingThis.isEmpty())
-					ep.msg("<h>%s<i> lost <h>%s<i> %s.", You, moneyString(-delta), forDoingThis);
+					ep.msg("<h>%s<i> stracil <h>%s<i> %s.", You, moneyString(-delta), forDoingThis);
 				return true;
 			}
 			else
 			{
 				// There was not enough money to pay
 				if (toDoThis != null && !toDoThis.isEmpty())
-					ep.msg("<h>%s<i> can't afford <h>%s<i> %s.", You, moneyString(-delta), toDoThis);
+					ep.msg("<h>%s<i> nie mozna dac <h>%s<i> %s.", You, moneyString(-delta), toDoThis);
 				return false;
 			}
 		}
