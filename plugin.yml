@@ -90,47 +90,47 @@ permissions:
   factions.admin.any:
     description: give or revoke admin status for any player in any faction
   factions.autoclaim:
-    description: auto-claim land as you walk around
+    description: automatycznie zajmuj teren podczas chodzenia
   factions.bypass:
     description: enable admin bypass mode
   factions.chat:
-    description: change chat mode
+    description: zmien tryb czatu
   factions.chatspy:
     description: enable admin chat spy mode
   factions.claim:
-    description: claim land where you are standing
+    description: zajmij teren tam gdzie stoisz
   factions.config:
     description: change a conf.json setting
   factions.create:
-    description: create a new faction
+    description: zaloz nowe miasto
   factions.deinvite:
-    description: remove a pending invitation
+    description: usun oczekujace zaproszenie
   factions.description:
-    description: change the faction description
+    description: zmien opis miasta
   factions.disband:
-    description: disband a faction
+    description: rozwiaz maisto
   factions.disband.any:
     description: disband another faction
   factions.help:
-    description: display a help page
+    description: wyswietl pomoc
   factions.home:
     description: teleport to the faction home
   factions.invite:
-    description: invite a player to your faction
+    description: zapros gracza do swojego miasta
   factions.join:
-    description: join a faction
+    description: dolacz do miasta
   factions.join.any:
     description: join any faction, bypassing invitation process for closed factions
   factions.join.others:
     description: specify another player in the join command, to move them to the specified faction
   factions.kick:
-    description: kick a player from the faction
+    description: wyrzuc gracza z miasta
   factions.kick.any:
     description: kick anyone from any faction
   factions.leave:
-    description: leave your faction
+    description: opusc miasto
   factions.list:
-    description: see a list of the factions
+    description: zobacz liste miast
   factions.lock:
     description: lock all write stuff
   factions.managesafezone:
@@ -148,17 +148,17 @@ permissions:
   factions.money.balance.any:
     description: show money balance for factions other than your own
   factions.money.deposit:
-    description: deposit money into a faction bank
+    description: wplac pieniadze do banku miasta
   factions.money.withdraw:
-    description: withdraw money from your faction bank
+    description: wybierz pieniadze z banku miasta
   factions.money.withdraw.any:
     description: withdraw money from your factions other than your own
   factions.money.f2f:
-    description: transfer money from faction to faction
+    description: przelej pieniadze do innego miasta
   factions.money.f2p:
-    description: transfer money from faction to player
+    description: przelej pieniadze z miasta do gracza
   factions.money.p2f:
-    description: transfer money from player to faction
+    description: przelej pieniadze od gracza do miasta
   factions.money.kit.standard:
     children:
       factions.money.balance: true
