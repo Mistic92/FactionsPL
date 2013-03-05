@@ -49,6 +49,11 @@ public class CmdClaim extends FCommand
 		else
 		{
 			// radius claim
+			if (! Permission.CLAIM_RADIUS.has(sender, false))
+			{
+				msg("<b>Nie masz permisji do zajecia terenu o tym premieniu.");
+				return;
+			}                    
 			new SpiralTask(new FLocation(me), radius)
 			{
 				private int failCount = 0;

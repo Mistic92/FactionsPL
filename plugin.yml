@@ -58,6 +58,7 @@ permissions:
       factions.autoclaim: true
       factions.chat: true
       factions.claim: true
+      factions.claim.radius: true      
       factions.deinvite: true
       factions.description: true
       factions.disband: true
@@ -86,21 +87,23 @@ permissions:
       factions.unclaim: true
       factions.unclaimall: true
   factions.admin:
-    description: hand over your admin rights
+    description: oddaj prawa burmistrza
   factions.admin.any:
-    description: give or revoke admin status for any player in any faction
+    description: nadaj badz zabierz tytul burmistrza graczowi w miescie
   factions.autoclaim:
     description: automatycznie zajmuj teren podczas chodzenia
   factions.bypass:
-    description: enable admin bypass mode
+    description: wlacz tryb omijania - tylko dla admuf
   factions.chat:
     description: zmien tryb czatu
   factions.chatspy:
-    description: enable admin chat spy mode
+    description: wlacz tryb szpiega - tyko dla admuf
   factions.claim:
     description: zajmij teren tam gdzie stoisz
+  factions.claim.radius:
+    description: zajmij teren w okreslonym promieniu
   factions.config:
-    description: change a conf.json setting
+    description: zmien conf.json - takie tam...
   factions.create:
     description: zaloz nowe miasto
   factions.deinvite:
@@ -110,23 +113,23 @@ permissions:
   factions.disband:
     description: rozwiaz maisto
   factions.disband.any:
-    description: disband another faction
+    description: rozwiaz inne miasto
   factions.help:
     description: wyswietl pomoc
   factions.home:
-    description: teleport to the faction home
+    description: teleport na spawn miasta
   factions.invite:
     description: zapros gracza do swojego miasta
   factions.join:
     description: dolacz do miasta
   factions.join.any:
-    description: join any faction, bypassing invitation process for closed factions
+    description: dolacz do wybranego miasta - tryb omijania dla adminow
   factions.join.others:
-    description: specify another player in the join command, to move them to the specified faction
+    description: wymusza dolaczenia gracza do wybranego miasta
   factions.kick:
     description: wyrzuc gracza z miasta
   factions.kick.any:
-    description: kick anyone from any faction
+    description: wyrzuc kogokolwiek z jakiegokolwiek miasta
   factions.leave:
     description: opusc miasto
   factions.list:
@@ -138,21 +141,21 @@ permissions:
   factions.managewarzone:
     description: claim land as a war zone and build/destroy within war zones
   factions.map:
-    description: show the territory map, and set optional auto update
+    description: pokaz mape terenu i opcjonalnie ustaw na auto odswiezanie
   factions.mod:
-    description: give or revoke moderator rights
+    description: zabierz lub nadaj prawa zastepcy miasta
   factions.mod.any:
-    description: give or revoke moderator rights for any player in any faction
+    description: zabierz lub nadaj prawa zastepny dowolnemu graczowi w dowolnym miescie
   factions.money.balance:
-    description: show your factions current money balance
+    description: zobacz czy hajs w miescie sie zgadza
   factions.money.balance.any:
-    description: show money balance for factions other than your own
+    description: zobacz hajs innych miast
   factions.money.deposit:
     description: wplac pieniadze do banku miasta
   factions.money.withdraw:
     description: wybierz pieniadze z banku miasta
   factions.money.withdraw.any:
-    description: withdraw money from your factions other than your own
+    description: wybierz pieniadze z banku innego miasta
   factions.money.f2f:
     description: przelej pieniadze do innego miasta
   factions.money.f2p:
@@ -181,44 +184,44 @@ permissions:
   factions.noboom:
     description: toggle explosions (peaceful factions only)
   factions.open:
-    description: switch if invitation is required to join
+    description: zmien tryb miasta, zaproszenia wymagane lub nie
   factions.owner:
-    description: set ownership of claimed land
+    description: ustaw wlasciciela zajetego terenu
   factions.ownerlist:
-    description: list owner(s) of this claimed land
+    description: zobacz liste wlascicieli zajetego terenu
   factions.ownershipbypass:
     description: bypass ownership restrictions within own faction's territory
   factions.setpeaceful:
-    description: designate a faction as peaceful
+    description: ustaw miasto jako przyjazne
   factions.setpermanent:
-    description: designate a faction as permanent
+    description: ustaw miasto jako wieczne
   factions.setpermanentpower:
     description: set permanent power for a faction
   factions.power:
-    description: show player power info
+    description: zobacz moc gracza
   factions.power.any:
-    description: view an other players power level
+    description: zobacz moc innego gracza
   factions.powerboost:
     description: apply permanent power bonus/penalty to specified player or faction
   factions.relation:
-    description: set relation wish to another faction
+    description: ustaw relacje z innym miastem
   factions.reload:
     description: reload data file(s) from disk
   factions.save:
     description: save all data to disk
   factions.sethome:
-    description: set the faction home
+    description: ustaw spawn miasta
   factions.sethome.any:
-    description: set faction home for another faction
+    description: usatw spawn miasta dla innego miasta
   factions.show:
-    description: show faction information
+    description: zobacz informacje o miescie
   factions.tag:
-    description: change the faction tag
+    description: zmien tag miasta
   factions.title:
-    description: set or remove a players title
+    description: ustaw lub usun tytul gracza
   factions.version:
-    description: see the version of the plugin
+    description: zobacz wersje pluginu
   factions.unclaim:
-    description: unclaim the land where you are standing
+    description: zwolnij teren w miejscu gdzie stoisz
   factions.unclaimall:
-    description: unclaim all of your factions land
+    description: zwolnij tereny calego miasta
