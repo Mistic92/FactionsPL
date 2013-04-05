@@ -76,7 +76,7 @@ public abstract class FRelationCommand extends FCommand
 		else
 		{
 			them.msg(currentRelationColor+myFaction.getTag()+"<i> chcialby byc twoim "+targetRelation.getColor()+targetRelation.toString());
-			them.msg("<i>Wpisz <c>/"+Conf.baseCommandAliases.get(0)+" "+targetRelation+" "+myFaction.getTag()+"<i> aby zaakceptowac.");
+			them.msg("<i>Wpisz <c>/f ally "+myFaction.getTag()+"<i> aby zaakceptowac.");
 			myFaction.msg(currentRelationColor+them.getTag()+"<i> zostal poinformowany o tym ze chcesz byc "+targetRelation.getColor()+targetRelation);
 		}
 		
