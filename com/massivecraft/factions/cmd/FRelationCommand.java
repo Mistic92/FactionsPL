@@ -68,9 +68,30 @@ public abstract class FRelationCommand extends FCommand
 			// trigger the faction relation event
 			FactionRelationEvent relationEvent = new FactionRelationEvent(myFaction, them, oldRelation, currentRelation);
 			Bukkit.getServer().getPluginManager().callEvent(relationEvent);
-
-			them.msg("<i>Twoje miasto jest teraz w "+currentRelationColor+targetRelation.toString()+"<i> w stosunku do "+currentRelationColor+myFaction.getTag());
-			myFaction.msg("<i>Twoje miasto jest teraz w "+currentRelationColor+targetRelation.toString()+"<i> w stosunku do "+currentRelationColor+them.getTag());
+                        if(targetRelation.toString()=="sojusznik") //sprawdzenie czy sojusznik
+                        {
+			them.msg("<i>Twoje miasto jest teraz "+
+                                currentRelationColor+
+                                "w sojuszu z "+
+                                currentRelationColor+
+                                myFaction.getTag());
+			myFaction.msg("<i>Twoje miasto jest teraz w "+
+                                currentRelationColor+
+                                "w sojuszu z "+
+                                currentRelationColor+them.getTag());
+                        }//sprawdzenie czy sojusznik
+                        else//jesli wrog
+                        {
+			them.msg("<i>Twoje miasto jest teraz "+
+                                currentRelationColor+
+                                "wrogiem "+
+                                currentRelationColor+
+                                myFaction.getTag());
+			myFaction.msg("<i>Twoje miasto jest teraz "+
+                                currentRelationColor+
+                                "wrogiem "+
+                                currentRelationColor+them.getTag());                            
+                        }//jesli wrog
 		}
 		// inform the other faction of your request
 		else

@@ -37,7 +37,7 @@ public class RelationUtil
 			FPlayer fplayerthat = (FPlayer) that;
 			if (that == me)
 			{
-				ret = "Ty";
+				ret = "";
 			}
 			else if (thatFaction == myFaction)
 			{

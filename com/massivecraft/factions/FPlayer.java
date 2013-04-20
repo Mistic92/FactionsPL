@@ -230,8 +230,8 @@ public class FPlayer extends PlayerEntity implements EconomyParticipator
 		if (Conf.noPVPDamageToOthersForXSecondsAfterLogin > 0)
 		{
 			this.loginPvpDisabled = true;
-		}
-	}
+		}	
+}
 
 	public boolean isMapAutoUpdating()
 	{

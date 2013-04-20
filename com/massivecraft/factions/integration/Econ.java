@@ -233,7 +233,7 @@ public class Econ
 		if ( ! econ.has(ep.getAccountId(), delta))
 		{
 			if (toDoThis != null && !toDoThis.isEmpty())
-				ep.msg("<h>%s<i> nie mozna dac <h>%s<i> %s.", ep.describeTo(ep, true), moneyString(delta), toDoThis);
+				ep.msg("<h>%s<i> Nie mozna dac <h>%s<i> %s.", ep.describeTo(ep, true), moneyString(delta), toDoThis);
 			return false;
 		}
 		return true;
